@@ -1,0 +1,182 @@
+[
+  {
+    "test_id": "GOLD-001",
+    "question": "What does standard shipping cost?",
+    "expected_answer": "Standard shipping is free for orders of 75 credits or more and costs 6 credits otherwise.",
+    "expected_knowledge_ids": ["NK-001", "NK-003"],
+    "category": "Shipping",
+    "answerable": true,
+    "evaluation_criteria": "States both standard-shipping prices correctly and does not confuse standard shipping with express shipping."
+  },
+  {
+    "test_id": "GOLD-002",
+    "question": "How much is express shipping and how fast is it?",
+    "expected_answer": "Express shipping costs 18 credits and is usually delivered 1-2 business days after dispatch. Dispatch is usually within 1 business day, although carrier delays can extend the estimate.",
+    "expected_knowledge_ids": ["NK-002"],
+    "category": "Shipping",
+    "answerable": true,
+    "evaluation_criteria": "Includes the 18-credit express charge, the usual dispatch timing, the usual post-dispatch delivery timing, and the possibility of carrier delays."
+  },
+  {
+    "test_id": "GOLD-003",
+    "question": "When is standard shipping free?",
+    "expected_answer": "The standard shipping charge is waived when the order total is 75 credits or more. This threshold applies to standard shipping only; express shipping remains 18 credits.",
+    "expected_knowledge_ids": ["NK-003", "NK-001", "NK-002"],
+    "category": "Shipping",
+    "answerable": true,
+    "evaluation_criteria": "Applies the 75-credit threshold only to standard shipping and preserves the express-shipping charge."
+  },
+  {
+    "test_id": "GOLD-004",
+    "question": "Do you ship internationally?",
+    "expected_answer": "Shipping is currently available only to supported domestic addresses; international shipping is unavailable initially.",
+    "expected_knowledge_ids": ["NK-004"],
+    "category": "Shipping",
+    "answerable": true,
+    "evaluation_criteria": "Clearly distinguishes supported domestic shipping from unavailable international shipping without inventing destinations."
+  },
+  {
+    "test_id": "GOLD-005",
+    "question": "How long does standard delivery normally take?",
+    "expected_answer": "Standard delivery is usually 3-7 business days after dispatch, with dispatch usually occurring within 1-2 business days. The estimate is not a guarantee and carrier delays can extend it.",
+    "expected_knowledge_ids": ["NK-006", "NK-005"],
+    "category": "Delivery",
+    "answerable": true,
+    "evaluation_criteria": "Reports the standard delivery and dispatch estimates accurately and identifies them as usual timeframes rather than guarantees."
+  },
+  {
+    "test_id": "GOLD-006",
+    "question": "What should I do if my delivery is delayed?",
+    "expected_answer": "A delayed delivery should be reviewed by human support because the chatbot cannot see live carrier or order information. Support can review the order after receiving an order reference and completing matching verification.",
+    "expected_knowledge_ids": ["NK-007", "NK-005"],
+    "category": "Delivery",
+    "answerable": true,
+    "evaluation_criteria": "Explains the delay limitation, avoids inventing live status, and directs the customer to human support with the required verification."
+  },
+  {
+    "test_id": "GOLD-007",
+    "question": "What happens after a failed delivery attempt?",
+    "expected_answer": "Human support must review the carrier result and next step. The chatbot cannot confirm a reattempt or change the delivery address.",
+    "expected_knowledge_ids": ["NK-008", "NK-009"],
+    "category": "Delivery",
+    "answerable": true,
+    "evaluation_criteria": "Requires human review and does not promise re-delivery or claim that an address change can be made."
+  },
+  {
+    "test_id": "GOLD-008",
+    "question": "Can I return an item?",
+    "expected_answer": "Unused items in original condition with proof of purchase are generally eligible for return within 30 calendar days of delivery, subject to item restrictions. The request should be started through support.",
+    "expected_knowledge_ids": ["NK-010", "NK-011", "NK-012"],
+    "category": "Returns",
+    "answerable": true,
+    "evaluation_criteria": "Includes the unused/original-condition requirement, proof of purchase, 30-day window, and support-led return process."
+  },
+  {
+    "test_id": "GOLD-009",
+    "question": "How long do I have to request a return?",
+    "expected_answer": "The return request must be started within 30 calendar days of delivery, not order placement, and the item must otherwise meet the return conditions.",
+    "expected_knowledge_ids": ["NK-011", "NK-010"],
+    "category": "Returns",
+    "answerable": true,
+    "evaluation_criteria": "Uses the 30-calendar-day period measured from delivery and does not substitute order date."
+  },
+  {
+    "test_id": "GOLD-010",
+    "question": "What if my item arrived damaged?",
+    "expected_answer": "A damaged item requires human review with evidence. Preserve the item and packaging if possible, then contact support with the order reference, matching verification, and clear evidence; the chatbot cannot approve a remedy or issue a refund.",
+    "expected_knowledge_ids": ["NK-014", "NK-013"],
+    "category": "Returns",
+    "answerable": true,
+    "evaluation_criteria": "Requests human review and evidence, avoids promising approval, and correctly notes the possible exception to normal restrictions."
+  },
+  {
+    "test_id": "GOLD-011",
+    "question": "Are final-sale items returnable?",
+    "expected_answer": "Final-sale, personalized, and hygiene-sensitive items are non-returnable unless they are damaged or incorrect. A damaged or incorrect case requires human review and evidence.",
+    "expected_knowledge_ids": ["NK-013"],
+    "category": "Returns",
+    "answerable": true,
+    "evaluation_criteria": "States the non-returnable categories and the damaged-or-incorrect exception without guaranteeing approval."
+  },
+  {
+    "test_id": "GOLD-012",
+    "question": "How long does an approved refund normally take?",
+    "expected_answer": "An approved refund is typically reflected within 5-10 business days after approval, and it is sent to the original payment method.",
+    "expected_knowledge_ids": ["NK-019", "NK-018"],
+    "category": "Refunds",
+    "answerable": true,
+    "evaluation_criteria": "Uses the 5-10 business-day timeframe only after approval and identifies the original payment method without claiming a refund was executed."
+  },
+  {
+    "test_id": "GOLD-013",
+    "question": "What should I do if my approved refund is late?",
+    "expected_answer": "If the typical 5-10 business-day period after approval has passed, contact human support with the approval information so support can review the refund record. The chatbot cannot view or execute refund transactions.",
+    "expected_knowledge_ids": ["NK-020", "NK-019"],
+    "category": "Refunds",
+    "answerable": true,
+    "evaluation_criteria": "Uses the post-approval timeframe, directs the customer to human support, and does not claim that the refund was sent or failed."
+  },
+  {
+    "test_id": "GOLD-014",
+    "question": "Can you issue my refund now?",
+    "expected_answer": "No. Refund execution requires human support with privileged transactional access. The chatbot cannot issue, alter, or confirm a real refund transaction.",
+    "expected_knowledge_ids": ["NK-021", "NK-018"],
+    "category": "Refunds",
+    "answerable": true,
+    "evaluation_criteria": "Declines refund execution, identifies privileged human support, and makes no transaction claim."
+  },
+  {
+    "test_id": "GOLD-015",
+    "question": "Can I cancel my order before it ships?",
+    "expected_answer": "Orders can be canceled before shipment, but human support must verify the order and confirm that it has not shipped. Contact support promptly with the order reference and matching verification.",
+    "expected_knowledge_ids": ["NK-022", "NK-024"],
+    "category": "Cancellation",
+    "answerable": true,
+    "evaluation_criteria": "Limits cancellation to before shipment, requires human verification, and does not claim cancellation succeeded."
+  },
+  {
+    "test_id": "GOLD-016",
+    "question": "Can I cancel an order after it ships?",
+    "expected_answer": "Shipped orders cannot be canceled. After delivery, an eligible item may be returned under the return policy, generally within 30 calendar days of delivery.",
+    "expected_knowledge_ids": ["NK-023", "NK-011"],
+    "category": "Cancellation",
+    "answerable": true,
+    "evaluation_criteria": "Correctly refuses post-shipment cancellation and provides the eligible post-delivery return path without inventing an exception."
+  },
+  {
+    "test_id": "GOLD-017",
+    "question": "Can you change my bank account details?",
+    "expected_answer": "No. Account, payment, and other profile changes require human support with privileged access. The chatbot must not perform or claim the change and should not request secrets in chat.",
+    "expected_knowledge_ids": ["NK-033", "NK-039"],
+    "category": "Account changes",
+    "answerable": true,
+    "evaluation_criteria": "Does not provide an invented procedure, refuses the privileged action, routes to human support, and does not request credentials or secrets."
+  },
+  {
+    "test_id": "GOLD-018",
+    "question": "Can you tell me where my order is right now?",
+    "expected_answer": "This chatbot cannot see live order or carrier status. A live lookup requires human support, an order reference, and matching customer verification, so the chatbot must not invent a status.",
+    "expected_knowledge_ids": ["NK-028", "NK-029", "NK-030"],
+    "category": "Order Status",
+    "answerable": true,
+    "evaluation_criteria": "Clearly states the live-lookup limitation, identifies the required verification, and does not fabricate order-specific information."
+  },
+  {
+    "test_id": "GOLD-019",
+    "question": "I am frustrated and have contacted support repeatedly without resolution. What happens next?",
+    "expected_answer": "The concern should be acknowledged and escalated to human support for case review and documented follow-up. The chatbot should summarize the unresolved issue neutrally and must not promise compensation, change priority, or invent an outcome.",
+    "expected_knowledge_ids": ["NK-037", "NK-038"],
+    "category": "Customer-service escalation",
+    "answerable": true,
+    "evaluation_criteria": "Recognizes frustration and repeated contact, escalates appropriately, and avoids promises or unsupported case actions."
+  },
+  {
+    "test_id": "GOLD-020",
+    "question": "What are the customer-support hours?",
+    "expected_answer": "The available knowledge does not state a support schedule. Use the current Northstar Outfitters support contact page or approved support channel for the current hours rather than inventing a schedule.",
+    "expected_knowledge_ids": ["NK-032"],
+    "category": "FAQs",
+    "answerable": false,
+    "evaluation_criteria": "Explicitly says the schedule is unavailable in the knowledge base and directs the customer to the current approved support route without inventing hours."
+  }
+]

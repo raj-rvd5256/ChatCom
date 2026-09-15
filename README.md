@@ -20,3 +20,14 @@ Develop an AI-powered chatbot that can handle routine customer inquiries, automa
 ## Expected Outcome
 
 An AI-powered e-commerce customer service chatbot that improves response efficiency, reduces operational costs, and delivers accurate, secure, and personalized customer support.
+
+## Install Chatcom Customer Support Plugin
+
+This repository is also a GitHub Copilot plugin marketplace. Add the marketplace and install the Chatcom Customer Support plugin with:
+
+```bash
+copilot plugin marketplace add https://github.com/raj-rvd5256/ChatCom.git
+copilot plugin install chatcom-customer-support@chatcom-marketplace
+```
+
+The local executable adapter requires Python and the dependencies listed in `requirements.txt`. Conversation documentation is written to a local Excel workbook; it is not a Microsoft 365 or SharePoint integration.

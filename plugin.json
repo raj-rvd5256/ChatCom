@@ -1,0 +1,10 @@
+{
+  "name": "chatcom-customer-support",
+  "description": "Chatcom e-commerce customer-support agent with RAG, guardrails, evaluation mode, and automatic Excel conversation documentation",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rajendra Pradhan"
+  },
+  "agents": "agents/",
+  "skills": "skills/"
+}
